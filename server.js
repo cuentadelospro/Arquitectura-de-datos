@@ -10,7 +10,40 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.send(/* ... código HTML ... */);
+    res.send(`
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Arquitectura de Datos</title>
+            <link rel="stylesheet" href="/style.css">
+        </head>
+        <body>
+            <div class="navbar">
+                <h1>🏗️ Arquitectura de Datos</h1>
+            </div>
+            <div class="container">
+                <div class="card">
+                    <h2>¡Bienvenido!</h2>
+                    <p>Aplicación Node.js para actividades de arquitectura de datos, desplegada en Azure App Service.</p>
+                    <p>Estado de la aplicación: <span style="color: #27ae60; font-weight: bold;">✅ Funcionando correctamente</span></p>
+                    <a href="/health" class="btn">Ver Estado de Salud</a>
+                </div>
+                <div class="card">
+                    <h3>📋 Características</h3>
+                    <ul>
+                        <li>✅ Compatible con Azure App Service</li>
+                        <li>✅ Puerto dinámico configurado</li>
+                        <li>✅ Estructura estándar de Node.js</li>
+                        <li>✅ Health check endpoint para monitoreo</li>
+                        <li>✅ Despliegue automático desde GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </body>
+        </html>
+    `);
 });
 
 app.get('/health', (req, res) => {

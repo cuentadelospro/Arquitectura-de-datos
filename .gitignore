@@ -75,3 +75,7 @@ Thumbs.db
 
 # Azure specific
 .azure/
+
+# Deployment files
+deployment.zip
+*.zip
