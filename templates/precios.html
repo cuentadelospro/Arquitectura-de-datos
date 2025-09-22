@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios - Crochet Creativo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        header {
+            background-color: #e91e63;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin: -20px -20px 20px -20px;
+            border-radius: 10px 10px 0 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #e91e63;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border: 2px solid #e91e63;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #e91e63;
+            color: white;
+        }
+        .active {
+            background-color: #e91e63;
+            color: white !important;
+        }
+        .pricing-table {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .pricing-table h3 {
+            color: #e91e63;
+            text-align: center;
+            margin-top: 0;
+            font-size: 2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #e91e63;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #fce4ec;
+        }
+        .price {
+            font-weight: bold;
+            color: #e91e63;
+            font-size: 1.2em;
+        }
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .pricing-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #e91e63;
+            transition: transform 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+        }
+        .pricing-card h4 {
+            color: #e91e63;
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+        .pricing-card .price-big {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e91e63;
+            margin: 10px 0;
+        }
+        .note {
+            background-color: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        .contact-info {
+            background-color: #e91e63;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧶 Crochet Creativo 🧶</h1>
+        </header>
+        
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/bordados">Bordados</a>
+            <a href="/precios" class="active">Precios</a>
+        </nav>
+        
+        <h2 style="text-align: center; color: #e91e63; font-size: 2.5em;">Lista de Precios</h2>
+        <p style="text-align: center; font-size: 1.1em; color: #666; margin-bottom: 40px;">
+            Precios competitivos para bordados de alta calidad
+        </p>
+        
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h4>🧵 Bordado Pequeño</h4>
+                <div class="price-big">$5</div>
+                <p>Hasta 2cm x 2cm</p>
+                <p>Perfecto para logos pequeños, iniciales o detalles discretos</p>
+            </div>
+            
+            <div class="pricing-card">
+                <h4>🎨 Bordado Mediano</h4>
+                <div class="price-big">$10</div>
+                <p>Hasta 5cm x 5cm</p>
+                <p>Ideal para nombres, diseños decorativos y parches medianos</p>
+            </div>
+            
+            <div class="pricing-card">
+                <h4>✨ Bordado Grande</h4>
+                <div class="price-big">$20</div>
+                <p>Hasta 10cm x 10cm</p>
+                <p>Para diseños complejos, logotipos grandes y arte detallado</p>
+            </div>
+        </div>
+        
+        <div class="pricing-table">
+            <h3>💰 Tabla Detallada de Precios</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Bordado</th>
+                        <th>Tamaño</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bordado Pequeño</td>
+                        <td>2cm x 2cm</td>
+                        <td>Iniciales, logos pequeños, detalles menores</td>
+                        <td class="price">$5.00</td>
+                    </tr>
+                    <tr>
+                        <td>Bordado Mediano</td>
+                        <td>5cm x 5cm</td>
+                        <td>Nombres, diseños decorativos, parches estándar</td>
+                        <td class="price">$10.00</td>
+                    </tr>
+                    <tr>
+                        <td>Bordado Grande</td>
+                        <td>10cm x 10cm</td>
+                        <td>Logotipos corporativos, diseños complejos</td>
+                        <td class="price">$20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Bordado Extra Grande</td>
+                        <td>15cm x 15cm</td>
+                        <td>Arte detallado, diseños de espalda completa</td>
+                        <td class="price">$35.00</td>
+                    </tr>
+                    <tr>
+                        <td>Bordado Personalizado</td>
+                        <td>Variable</td>
+                        <td>Diseños únicos creados especialmente</td>
+                        <td class="price">Cotizar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="note">
+            <strong>📋 Notas Importantes:</strong>
+            <ul>
+                <li>Los precios pueden variar según la complejidad del diseño</li>
+                <li>Descuentos disponibles para pedidos de más de 10 piezas</li>
+                <li>Tiempo de entrega: 3-5 días hábiles</li>
+                <li>Incluye consulta de diseño gratuita</li>
+                <li>Materiales de primera calidad incluidos</li>
+            </ul>
+        </div>
+        
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; margin: 30px 0;">
+            <h3 style="color: #e91e63; text-align: center;">🎯 Servicios Adicionales</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div style="text-align: center; padding: 10px;">
+                    <h4 style="color: #e91e63;">Diseño Digital</h4>
+                    <p class="price">$15</p>
+                    <p>Creación de diseño digital personalizado</p>
+                </div>
+                <div style="text-align: center; padding: 10px;">
+                    <h4 style="color: #e91e63;">Entrega Express</h4>
+                    <p class="price">+$10</p>
+                    <p>Entrega en 24-48 horas</p>
+                </div>
+                <div style="text-align: center; padding: 10px;">
+                    <h4 style="color: #e91e63;">Múltiples Colores</h4>
+                    <p class="price">+$5</p>
+                    <p>Por cada color adicional</p>
+                </div>
+                <div style="text-align: center; padding: 10px;">
+                    <h4 style="color: #e91e63;">Correcciones</h4>
+                    <p class="price">Gratis</p>
+                    <p>Primera corrección sin costo</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <h3>💬 ¿Necesitas un presupuesto personalizado?</h3>
+            <p>¡Contáctanos para obtener una cotización detallada!</p>
+            <p><strong>Email:</strong> precios@crochetcreativo.com</p>
+            <p><strong>Teléfono:</strong> +1 234 567 8900</p>
+            <p><strong>WhatsApp:</strong> Mensaje directo para cotizaciones rápidas</p>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 Crochet Creativo. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
