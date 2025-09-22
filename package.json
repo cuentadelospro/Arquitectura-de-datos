@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "test": "echo \"Info: No hay tests configurados aún\" && exit 0"
   },
   "keywords": ["node", "azure", "arquitectura", "datos"],
   "author": "",
