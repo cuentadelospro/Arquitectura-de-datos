@@ -1,0 +1,19 @@
+{
+  "name": "arquitectura-de-datos",
+  "version": "1.0.0",
+  "description": "Aplicación Node.js para actividades de arquitectura de datos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["node", "azure", "arquitectura", "datos"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
