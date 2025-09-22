@@ -1,8 +1,8 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
-# More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
+# More info on Node.js, GitHub Actions, and Azure App Service: https://aka.ms/node-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - Ayanami
+name: Build and deploy Node.js app to Azure Web App - Ayanami
 
 on:
   push:
@@ -19,28 +19,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python version
-        uses: actions/setup-python@v5
+      - name: Set up Node.js version
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.13'
+          node-version: '20'
+          cache: 'npm'
 
-      - name: Create and start virtual environment
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-      
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: npm ci
         
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+      # Optional: Add step to run tests here (npm test, etc.)
+      - name: Run tests
+        run: npm run test --if-present
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
         with:
-          name: python-app
+          name: node-app
           path: |
             .
-            !venv/
+            !node_modules/
 
   deploy:
     runs-on: ubuntu-latest
@@ -53,7 +51,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: python-app
+          name: node-app
       
       - name: Login to Azure
         uses: azure/login@v2
